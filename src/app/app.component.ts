@@ -1,21 +1,26 @@
 import { Component } from '@angular/core';
-import { FooterComponent } from './shared/footer/footer.component';
-import { NavbarComponent } from './shared/navbar/navbar.component';
-import { PortfolioComponent } from './pages/portfolio/portfolio.component';
+import { FooterComponent } from './pages/shared/footer/footer.component';
+import { NavbarComponent } from './pages/shared/navbar/navbar.component';
 import { AboutComponent } from './pages/about/about.component';
 import { RouterModule } from '@angular/router';
-import { HeaderComponent } from './shared/header/header.component';
-
+import { CommonModule } from '@angular/common';
+import { HeroeComponent } from './pages/hero/hero-component';
+import { ProjectsComponent } from './pages/projects/projects-component';
+import { ContactComponent } from './pages/contact/contact-component';
+NavbarComponent;
 @Component({
   selector: 'app-root',
   standalone: true,
   imports: [
     RouterModule,
-    FooterComponent,
+    CommonModule,
     NavbarComponent,
-    PortfolioComponent,
     AboutComponent,
-    HeaderComponent,
+    HeroeComponent,
+    FooterComponent,
+    ProjectsComponent,
+    ContactComponent,
+    CommonModule,
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',
