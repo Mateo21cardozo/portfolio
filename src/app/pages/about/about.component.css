@@ -22,7 +22,6 @@
   padding-right: 8px; /* espacio para el scrollbar */
 }
 
-/* opcional: estilizar el scrollbar para que se vea más moderno */
 .skills-container::-webkit-scrollbar {
   width: 6px;
 }
