@@ -94,4 +94,10 @@ export class ProjectsComponent {
         'This project is an interactive console application developed as part of a Udemy course, using Node.js as the main framework. The application employs packages like Inquirer and Yargs to create a smooth and dynamic user experience in the command line. This approach allows for handling various operations efficiently with a user-friendly interface.',
     },
   ];
+  showFullDescription: boolean = false;
+  expandedProjectId: number | null = null;
+
+  toggleDescription(id: number) {
+    this.expandedProjectId = this.expandedProjectId === id ? null : id;
+  }
 }

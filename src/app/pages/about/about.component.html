@@ -3,7 +3,7 @@
     <div class="text-center mb-5">
       <h2 class="section-title">Sobre Mí</h2>
     </div>
-    <div class="row">
+    <div class="row align-items-center">
       <div class="col-lg-6 mb-4">
         <p class="lead">
           Soy un desarrollador apasionado por crear soluciones innovadoras y
@@ -16,34 +16,15 @@
           tecnologías y enfrentar desafíos complejos.
         </p>
       </div>
+
       <div class="col-lg-6">
-        <div class="row">
-          <div class="col-md-6 mb-3">
-            <div class="skill-item text-center">
-              <i class="fab fa-angular"></i>
-              <h5>Angular</h5>
-              <p class="mb-0">Framework Frontend</p>
-            </div>
-          </div>
-          <div class="col-md-6 mb-3">
-            <div class="skill-item text-center">
-              <i class="fab fa-react"></i>
-              <h5>AWS</h5>
-              <p class="mb-0">servidor en Nube</p>
-            </div>
-          </div>
-          <div class="col-md-6 mb-3">
-            <div class="skill-item text-center">
-              <i class="fab fa-node-js"></i>
-              <h5>Node.js</h5>
-              <p class="mb-0">Backend</p>
-            </div>
-          </div>
-          <div class="col-md-6 mb-3">
-            <div class="skill-item text-center">
-              <i class="fas fa-database"></i>
-              <h5>Databases</h5>
-              <p class="mb-0">SQL & NoSQL</p>
+        <div class="skills-container">
+          <div class="row justify-content-center">
+            <div class="col-4 col-sm-3 mb-4" *ngFor="let skill of skills">
+              <div class="skill-item text-center">
+                <i [class]="skill.icon"></i>
+                <h6>{{ skill.name }}</h6>
+              </div>
             </div>
           </div>
         </div>

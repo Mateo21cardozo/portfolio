@@ -10,15 +10,45 @@
           <div class="project-img text-center py-4">
             <img [src]="project.logo" width="250" alt="logo" />
           </div>
+
           <div class="project-body card-body text-center">
             <h4 class="project-title mb-3">{{ project.title }}</h4>
-            <p>{{ project.description | shorten:150 }}</p>
+
+            <!-- Show short description if NOT expanded -->
+            <ng-container
+              *ngIf="expandedProjectId !== project.id; else fullDesc"
+            >
+              <p>{{ project.description | shorten:150 }}</p>
+
+              <span
+                *ngIf="project.description && project.description.length > 150"
+                class="see-more ms-2"
+                style="color: #7a5af8; cursor: pointer"
+                (click)="toggleDescription(project.id)"
+              >
+                Ver más
+              </span>
+            </ng-container>
+
+            <!-- Show full description when expanded -->
+            <ng-template #fullDesc>
+              <p>{{ project.description }}</p>
+              <span
+                class="see-less ms-2"
+                style="color: #7a5af8; cursor: pointer"
+                (click)="toggleDescription(project.id)"
+              >
+                Ver menos
+              </span>
+            </ng-template>
+
             <div class="project-tags mt-3">
               <span
                 class="badge bg-light text-dark me-2"
                 *ngFor="let tag of project.tags"
-                >{{ tag }}</span
               >
+                {{ tag }}
+              </span>
             </div>
           </div>
         </div>

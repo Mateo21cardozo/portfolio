@@ -1,16 +1,52 @@
 .progress-bar {
-    background-color: #0eb9e4;
-    /* Cambia el fondo a blanco */
-    color: #000;
-    /* Color de texto si es necesario */
-        height: 10px;
-}.form-label {
-    color: #000;
-    /* Cambia el color de los títulos de los label a negro */
-}.custom-progress-bar {
-    height: 15px;
-    /* Ajusta el valor según el espesor deseado */
+  background-color: #0eb9e4;
+  /* Cambia el fondo a blanco */
+  color: #000;
+  /* Color de texto si es necesario */
+  height: 10px;
 }
-.progress{
-    height: 10px
+.form-label {
+  color: #000;
+  /* Cambia el color de los títulos de los label a negro */
+}
+.custom-progress-bar {
+  height: 15px;
+  /* Ajusta el valor según el espesor deseado */
+}
+.progress {
+  height: 10px;
+}
+.skills-container {
+  max-height: 350px; /* controla el alto visible (≈3 filas) */
+  overflow-y: auto; /* permite scroll vertical */
+  padding-right: 8px; /* espacio para el scrollbar */
+}
+
+/* opcional: estilizar el scrollbar para que se vea más moderno */
+.skills-container::-webkit-scrollbar {
+  width: 6px;
+}
+.skills-container::-webkit-scrollbar-thumb {
+  background-color: #ccc;
+  border-radius: 3px;
+}
+.skills-container::-webkit-scrollbar-thumb:hover {
+  background-color: #aaa;
+}
+
+/* estilo para los ítems */
+.skill-item i {
+  font-size: 2rem;
+  color: #7a5af8;
+  transition: transform 0.3s ease;
+}
+
+.skill-item:hover i {
+  transform: scale(1.1);
+}
+
+.skill-item h6 {
+  margin-top: 0.5rem;
+  font-size: 0.9rem;
+  color: #333;
 }
