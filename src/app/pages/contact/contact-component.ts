@@ -9,4 +9,8 @@ import { Component } from '@angular/core';
 export class ContactComponent {
   anio: number = new Date().getFullYear();
   gmail: string = 'mateo21cardozo@gmail.com';
+  openCV() {
+    const cvUrl = 'assets/cv/MateoCardozoCvES.pdf';
+    window.open(cvUrl, '_blank');
+  }
 }
