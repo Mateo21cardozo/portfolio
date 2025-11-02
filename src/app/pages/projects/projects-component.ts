@@ -38,9 +38,10 @@ export class ProjectsComponent {
         'Lambda',
         'API Gateway',
         'DynamoDB',
+        'MFE',
       ],
       description:
-        'At Pizzaapp, a site dedicated to the control and Creation of orders  of pizzas , I worked as a Fullstack developer. In this project I had the challenge pf creation and update of the application using Angular for the front-end and Serverless (Nodejs and using Lambdas) for the back-end.',
+        'At Pizzaapp, a site dedicated to the control and Creation of orders  of pizzas , I worked as a Fullstack developer. In this project I had the challenge of creation and update of the application using Angular and Microfrontends for the front-end and Serverless (Nodejs and using Lambdas) for the back-end.',
     },
 
     {
