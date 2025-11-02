@@ -19,6 +19,7 @@
 .skills-container {
   max-height: 350px; /* controla el alto visible (≈3 filas) */
   overflow-y: auto; /* permite scroll vertical */
+  overflow-x: hidden;
   padding-right: 8px; /* espacio para el scrollbar */
 }
 
