@@ -21,6 +21,9 @@
   overflow-y: auto; /* permite scroll vertical */
   overflow-x: hidden;
   padding-right: 8px; /* espacio para el scrollbar */
+  @media (min-width: 1024px) {
+    max-height: 260px; /* controla el alto visible (≈3 filas) */
+  }
 }
 
 .skills-container::-webkit-scrollbar {
